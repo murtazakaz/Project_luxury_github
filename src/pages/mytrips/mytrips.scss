@@ -1,0 +1,42 @@
+page-mytrips {
+    .item-ios ion-thumbnail img {
+        width: 100px;
+        height: 100px;
+    }
+    .item-md ion-thumbnail img {
+        width: 100px;
+        height: 100px;
+    }
+    .segment-md .segment-button.segment-activated {
+        border-color: white !important;
+        opacity: 1;
+    }
+    .segment-md .segment-button {
+    color:white;
+    }
+    .card-background-page {
+        
+          ion-card {
+            position: relative;
+            text-align: center;
+          }
+        
+          .card-title {
+            position: absolute;
+            top: 36%;
+            font-size: 2.0em;
+            width: 100%;
+            font-weight: bold;
+            color: black;
+          }
+        
+          .card-subtitle {
+            font-size: 2.0em;
+            position: absolute;
+            top: 52%;
+            width: 100%;
+            color: black;
+          }
+        
+        }
+}

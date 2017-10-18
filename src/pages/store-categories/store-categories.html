@@ -1,0 +1,138 @@
+<!--
+  Generated template for the OrderdetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar color="themeClr" hideBackButton>
+        <ion-title>Category</ion-title>
+        <!-- <ion-buttons left>
+            <button ion-button style="background:transparent;color:white;font-size: 2.7rem;" (click)="openMenu('main')">
+                     <ion-icon class="iconsize" name="menu"></ion-icon>
+                    </button>
+        </ion-buttons> -->
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="background-store">
+
+    <ion-grid>
+
+        <ion-row align="center" style="color:white;" class="list card animated rotateInUpRight">
+            <ion-col col-4>
+                <a (tap)="itemlist('amusement_park')"><img style="border-radius: 15px;" src="img/categories/park.jpg" /><span>Amusement Parks</span></a>
+            </ion-col>
+
+            <ion-col col-4>
+                <a (tap)="itemlist('bank')"><img style="border-radius: 15px;" src="img/categories/Bank.jpg" /><span>Banks</span></a>
+            </ion-col>
+            <ion-col col-4>
+                <a (tap)="itemlist('beauty_salon')"><img style="border-radius: 15px;" src="img/categories/beauty.jpg" /><span>Beauty Parlours</span></a>
+            </ion-col>
+
+        </ion-row>
+
+        <ion-row align="center" style="color:white;" class="list card animated rotateInUpRight">
+            <ion-col col-4>
+                <a (tap)="itemlist('cafe')"><img style="border-radius: 15px;" src="img/categories/cafe.jpg" /><span>Cafes</span></a>
+            </ion-col>
+            <ion-col col-4>
+                <a (tap)="itemlist('clothing_store')"><img style="border-radius: 15px;" src="img/categories/men.jpg" /><span>Clothing Stores</span></a>
+            </ion-col>
+
+            <ion-col col-4>
+                <a (tap)="itemlist('movie_theater')"><img style="border-radius: 15px;" src="img/categories/movie.jpg" /><span>Cinemas</span></a>
+            </ion-col>
+
+        </ion-row>
+
+        <ion-row align="center" style="color:white;" class="list card animated rotateInUpRight">
+            <ion-col col-4>
+                <a (tap)="itemlist('dentist')"><img style="border-radius: 15px;" src="img/categories/dentist.jpg" /><span>Dentists</span></a>
+            </ion-col>
+
+            <ion-col col-4>
+                <a (tap)="itemlist('doctor')"><img style="border-radius: 15px;" src="img/categories/doctor.jpg" /><span>Doctors</span></a>
+            </ion-col>
+
+            <ion-col col-4>
+                <a (tap)="itemlist('gas_station')"><img style="border-radius: 15px;" src="img/categories/gas.jpg" /><span>Patrol Pumps</span></a>
+            </ion-col>
+
+        </ion-row>
+
+        <ion-row align="center" style="color:white;" class="list card animated rotateInUpRight">
+
+            <ion-col col-4>
+                <a (tap)="itemlist('gym')"><img style="border-radius: 15px;" src="img/categories/gym.jpg" /><span>Gyms</span></a>
+            </ion-col>
+
+            <ion-col col-4>
+                <a (tap)="itemlist('hair_care')"><img style="border-radius: 15px;" src="img/categories/hairsalon.jpg" /><span>Hair Salons</span></a>
+            </ion-col>
+            <ion-col col-4>
+                <a (tap)="itemlist('hospital')"><img style="border-radius: 15px;" src="img/categories/hospital.jpg" /><span>Hospitals</span></a>
+            </ion-col>
+
+
+
+
+        </ion-row>
+
+        <ion-row align="center" style="color:white;" class="list card animated rotateInUpRight">
+            <ion-col col-4>
+                <a (tap)="itemlist('insurance_agency')"><img style="border-radius: 15px;" src="img/categories/insurance.jpg" /><span>Insurance Agencies</span></a>
+            </ion-col>
+            <ion-col col-4>
+                <a (tap)="itemlist('laundry')"><img style="border-radius: 15px;" src="img/categories/dryclean.jpg" /><span>Dry Cleaners</span></a>
+            </ion-col>
+            <ion-col col-4>
+                <a (tap)="itemlist('mosque')"><img style="border-radius: 15px;" src="img/categories/mosque.jpg" /><span>Mosques</span></a>
+            </ion-col>
+
+
+
+        </ion-row>
+        <ion-row align="center" style="color:white;" class="list card animated rotateInUpRight">
+            <ion-col col-4>
+                <a (tap)="itemlist('museum')"><img style="border-radius: 15px;" src="img/categories/museum.jpg" /><span>Museums</span></a>
+            </ion-col>
+            <ion-col col-4>
+                <a (tap)="itemlist('pharmacy')"><img style="border-radius: 15px;" src="img/categories/pharmacy.jpg" /><span>Pharmacies</span></a>
+            </ion-col>
+            <ion-col col-4>
+                <a (tap)="itemlist('shoe_store')"><img style="border-radius: 15px;" src="img/categories/shoe.jpg" /><span>Shoe Stores</span></a>
+            </ion-col>
+
+
+
+        </ion-row>
+        <ion-row align="center" style="color:white;" class="list card animated fadeInLeftBig">
+            <ion-col col-4>
+                <a (tap)="itemlist('shopping_mall')"><img style="border-radius: 15px;" src="img/categories/mall.jpg" /><span>Shopping Malls</span></a>
+            </ion-col>
+
+            <ion-col col-4>
+                <a (tap)="itemlist('travel_agency')"><img style="border-radius: 15px;" src="img/categories/travel.jpg" /><span>Travel Agencies</span></a>
+            </ion-col>
+            <!-- <ion-col col-4>
+                <a (tap)="itemlist('store')"><img style="border-radius: 15px;" src="img/categories/tailor.jpg" /><span>Tailor</span></a>
+            </ion-col> -->
+            <ion-col col-4>
+                <a (tap)="itemlist('restaurant')"><img style="border-radius: 15px;" src="img/categories/restaurant.jpg" /><span>Restaurants</span></a>
+            </ion-col>
+        </ion-row>
+        <ion-row align="center" style="color:white;" class="list card animated rotateInUpLeft">
+
+
+            <ion-col col-4>
+                <a (tap)="itemlist('university')"><img style="border-radius: 15px;" src="img/categories/university.jpg" /><span>Universities</span></a>
+            </ion-col>
+
+        </ion-row>
+
+    </ion-grid>
+</ion-content>

@@ -1,0 +1,129 @@
+<ion-menu side="left" type="overlay" [content]="nav" id="menu1">
+    <ion-header>
+    </ion-header>
+
+    <ion-content class="has-header">
+        <ion-list no-lines>
+            <div align="center" style="background:black;height:100px ">
+                <img style="margin-top: -4%;
+                width: 62%;" src="img/xlogos.png" />
+            </div>
+            <ion-item>
+                <button (tap)="OnLoad(homepage) " class="activatedMenu" ion-item no-lines>
+                    <ion-icon item-start name="home"></ion-icon>
+                Home
+            </button>
+            </ion-item>
+            <ion-item>
+                <button (tap)="store()" class="activatedMenu" ion-item no-lines>
+                        <ion-icon item-start name="home"></ion-icon>
+                    Luxurri Store
+                </button>
+            </ion-item>
+            <!-- <ion-item >
+                    <button class="activatedMenu" ion-item no-lines>
+                    <ion-icon item-start name="timer"></ion-icon>
+               Trips History
+                    </button>
+            </ion-item> -->
+            <ion-item class="">
+                <button (tap)="pageload(wallet)" class="activatedMenu" ion-item no-lines>
+                    <ion-icon item-start name="cash"></ion-icon>
+                Wallet
+                    </button>
+            </ion-item>
+            <ion-item class="">
+                <button (tap)="pageload(mytrips)" class="activatedMenu" ion-item no-lines>
+                    <ion-icon item-start name="pin"></ion-icon>
+                 My Trips
+                    </button>
+            </ion-item>
+            <!-- <ion-item class="">
+                    <button (tap)="pageload(aboutus)"class="activatedMenu" ion-item no-lines>
+                    <ion-icon item-start name="person"></ion-icon>
+              User profile
+                    </button>
+            </ion-item> -->
+            <!-- <ion-item class="">
+                    <button class="activatedMenu" ion-item no-lines>
+                    <ion-icon item-start name="star"></ion-icon>
+                Rate the App
+                    </button>
+            </ion-item> -->
+            <ion-item class="">
+                <button (tap)="pageload(aboutus)" class="activatedMenu" ion-item no-lines>
+                    <ion-icon item-start name="information-circle"></ion-icon>
+                About Us
+                    </button>
+            </ion-item>
+            <ion-item class="">
+                <button (tap)="pageload(changepassword)" class="activatedMenu" ion-item no-lines>
+                    <ion-icon item-start name="settings"></ion-icon>
+                Change Password
+                    </button>
+            </ion-item>
+            <!-- <ion-item   (click)="presentProfileModal()">
+                <ion-icon item-start><img width="100%" src="img/nav_aboutus.png" /> </ion-icon>
+                CONTACT US
+            </ion-item>
+            <ion-item  >
+                <ion-icon item-start><img width="100%" src="img/nav_terms_and_conditions.png" /> </ion-icon>
+                TERMS AND CONDITIONS
+            </ion-item> -->
+            <ion-item class="">
+                <button (tap)="OnLoad(logout)" ion-item no-lines>
+                    <ion-icon item-start name="log-out"></ion-icon>
+                Logout
+                    </button>
+            </ion-item>
+
+        </ion-list>
+
+
+
+
+    </ion-content>
+</ion-menu>
+
+<ion-nav [root]="rootPage" #nav></ion-nav>
+
+<!-- <ion-menu side="left" type="overlay" [content]="navStore" id="menu2">
+    <ion-header>
+    </ion-header>
+
+    <ion-content class="has-header">
+        <ion-list no-lines>
+            <div align="center" style="background:black;height:100px ">
+                <img style="margin-top: -4%;
+                    width: 62%;" src="img/xlogos.png" />
+            </div>
+            <ion-item>
+                <button (tap)="OnLoad(homepage) " class="activatedMenu" ion-item no-lines>
+                        <ion-icon item-start name="home"></ion-icon>
+                    Home
+                </button>
+            </ion-item>
+            <ion-item>
+                <button (tap)="store()" class="activatedMenu" ion-item no-lines>
+                            <ion-icon item-start name="home"></ion-icon>
+                        Luxurri Store
+                    </button>
+            </ion-item>
+         
+            <ion-item class="">
+                <button (tap)="pageload(wallet)" class="activatedMenu" ion-item no-lines>
+                        <ion-icon item-start name="cash"></ion-icon>
+                    Wallet
+                        </button>
+            </ion-item>
+
+
+        </ion-list>
+
+
+
+
+    </ion-content>
+</ion-menu>
+
+<ion-nav [root]="storehomepage" #navStore></ion-nav> -->

@@ -1,0 +1,49 @@
+<ion-header>
+    <ion-navbar color="themeClr">
+        <ion-title>Register User</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding class="background">
+    <div align="center" style="margin-top: 4%;">
+        <!-- <img src="img/logo.png" alt=""> -->
+        <div style="margin-top: 16%;">
+        <ion-item class="bg animated fadein">
+            <ion-label>
+                <!-- <ion-icon style="color:#d83105" item-start name="mail"></ion-icon> -->
+            </ion-label>
+         
+            <ion-input style="color:white" type="text" placeholder="Enter Name" [(ngModel)]="name"></ion-input>
+        </ion-item>
+        <br>
+        <ion-item class="bg animated fadein">
+            <ion-label>
+                <!-- <ion-icon style="color:#d83105" item-start name="mail"></ion-icon> -->
+            </ion-label>
+            <ion-input style="color:white" type="email" placeholder="Enter Email" [(ngModel)]="email"></ion-input>
+        </ion-item>
+        <br>
+        <ion-item class="bg animated fadein">
+            <ion-label>
+                <!-- <ion-icon style="color:#d83105" item-start name="lock"></ion-icon> -->
+            </ion-label>
+            <ion-input style="color:white" type="password" placeholder="Enter Password" [(ngModel)]="password"></ion-input>
+        </ion-item>
+        <br>
+        <ion-item class="bg animated fadein">
+            <ion-label>
+                <!-- <ion-icon style="color:#d83105" item-start name="lock"></ion-icon> -->
+            </ion-label>
+            <ion-input style="color:white" type="password" placeholder="ReType Password"></ion-input>
+        </ion-item>
+        <br>
+        <ion-item class="bg animated fadein">
+            <ion-label>
+                <!-- <ion-icon style="color:#d83105" item-start name="mail"></ion-icon> -->
+            </ion-label>
+            <ion-input style="color:white" type="numeric" placeholder="Enter Mobile No." [(ngModel)]="mobileNumber"></ion-input>
+        </ion-item>
+        <br>
+        <button class="btnclass animated fadein" style="height:44px;" ion-button (click)="signup()">Register</button>
+    </div>
+    </div>
+</ion-content>

@@ -1,0 +1,170 @@
+<!--
+  Generated template for the MytripsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="black">
+    <ion-title>My Trips</ion-title>
+  </ion-navbar>
+  <div padding style="background-color:black">
+    <ion-segment [(ngModel)]="trips">
+      <ion-segment-button value="past">
+        Past Trips
+      </ion-segment-button>
+      <ion-segment-button value="reserved">
+        Reserved Trips
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+</ion-header>
+
+
+<ion-content class="background card-background-page">
+  
+  
+  <div [ngSwitch]="trips">
+    <ion-list *ngSwitchCase="'past'">
+      <ion-card *ngFor="let trip of tripsData">
+        <img src="img/map.png"/> 
+        <div class="card-title"></div>
+        <div class="card-subtitle"></div>
+        <div style="text-align: left" padding>
+
+        <h6><ion-icon item-start name="arrow-round-forward"></ion-icon>&nbsp;&nbsp;&nbsp;<b>From: {{trip.orderLocation}}</b></h6>
+        <h6><ion-icon item-start name="pin"></ion-icon>&nbsp;&nbsp;&nbsp;<b>To: Not Defined</b></h6>
+      </div>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="https://maps.googleapis.com/maps/api/staticmap?center=" + {{trip.orderLatitude}} + "," + {{trip.orderLongitude}} + "&zoom=13&size=320x240&maptype=roadmap&markers=color:blue%7Clabel:P%7C" + + {{trip.orderLatitude}} + "," + {{trip.orderLongitude}} + "&key=AIzaSyCw-zuN8P0RpcptBWGXUqTcBQvCR4Z2DaE">
+        </ion-thumbnail>
+        <h2>Driver's Ratings</h2>
+       <img style="width: 45%;" src="img/star.jpg"/>
+       <p>{{trip.driverFullName}}</p>
+       <p>{{trip.driverCarType}} {{trip.driverCarColor}}</p>
+      </ion-item>
+      </ion-card>
+      <!-- <ion-card>
+          <img src="img/map.png"/> 
+          <div class="card-title"></div>
+          <div class="card-subtitle"></div>
+          <div style="text-align: left" padding>
+  
+          <h6><ion-icon item-start name="arrow-round-forward"></ion-icon>&nbsp;&nbsp;&nbsp;<b>From: Windsong Palace 6th Floor office#604</b></h6>
+          <h6><ion-icon item-start name="pin"></ion-icon>&nbsp;&nbsp;&nbsp;<b>To: Gulshan-eIqbal</b></h6>
+        </div>
+        <ion-item>
+          <ion-thumbnail item-start>
+            <img src="img/driver.jpg">
+          </ion-thumbnail>
+          <h2>Driver's Ratings</h2>
+         <img style="width: 45%;" src="img/star.jpg"/>
+         <p>Muhammad Ali</p>
+         <p>Toyota Corolla Silver</p>
+        </ion-item>
+        </ion-card>
+        <ion-card>
+            <img src="img/map.png"/> 
+            <div class="card-title"></div>
+            <div class="card-subtitle"></div>
+            <div style="text-align: left" padding>
+    
+            <h6><ion-icon item-start name="arrow-round-forward"></ion-icon>&nbsp;&nbsp;&nbsp;<b>From: Windsong Palace 6th Floor office#604</b></h6>
+            <h6><ion-icon item-start name="pin"></ion-icon>&nbsp;&nbsp;&nbsp;<b>To: Gulshan-eIqbal</b></h6>
+          </div>
+          <ion-item>
+            <ion-thumbnail item-start>
+              <img src="img/driver.jpg">
+            </ion-thumbnail>
+            <h2>Driver's Ratings</h2>
+           <img style="width: 45%;" src="img/star.jpg"/>
+           <p>Muhammad Ali</p>
+           <p>Toyota Corolla Silver</p>
+          </ion-item>
+          </ion-card>
+          <ion-card>
+              <img src="img/map.png"/> 
+              <div class="card-title"></div>
+              <div class="card-subtitle"></div>
+              <div style="text-align: left" padding>
+      
+              <h6><ion-icon item-start name="arrow-round-forward"></ion-icon>&nbsp;&nbsp;&nbsp;<b>From: Windsong Palace 6th Floor office#604</b></h6>
+              <h6><ion-icon item-start name="pin"></ion-icon>&nbsp;&nbsp;&nbsp;<b>To: Gulshan-eIqbal</b></h6>
+            </div>
+            <ion-item>
+              <ion-thumbnail item-start>
+                <img src="img/driver.jpg">
+              </ion-thumbnail>
+              <h2>Driver's Ratings</h2>
+             <img style="width: 45%;" src="img/star.jpg"/>
+             <p>Muhammad Ali</p>
+             <p>Toyota Corolla Silver</p>
+            </ion-item>
+            </ion-card>
+            <ion-card>
+                <img src="img/map.png"/> 
+                <div class="card-title"></div>
+                <div class="card-subtitle"></div>
+                <div style="text-align: left" padding>
+        
+                <h6><ion-icon item-start name="arrow-round-forward"></ion-icon>&nbsp;&nbsp;&nbsp;<b>From: Windsong Palace 6th Floor office#604</b></h6>
+                <h6><ion-icon item-start name="pin"></ion-icon>&nbsp;&nbsp;&nbsp;<b>To: Gulshan-eIqbal</b></h6>
+              </div>
+              <ion-item>
+                <ion-thumbnail item-start>
+                  <img src="img/driver.jpg">
+                </ion-thumbnail>
+                <h2>Driver's Ratings</h2>
+               <img style="width: 45%;" src="img/star.jpg"/>
+               <p>Muhammad Ali</p>
+               <p>Toyota Corolla Silver</p>
+              </ion-item>
+              </ion-card> -->
+    </ion-list>
+  
+    <ion-list *ngSwitchCase="'reserved'">
+      <ion-item (click)="ReservededitPage()">
+        <ion-thumbnail item-start>
+          <img src="img/map.png">
+        </ion-thumbnail>
+        <p item-end><ion-icon item-end name="create"></ion-icon>Edit </p>
+        <h2>From: Windsong Palace </h2>
+        <p><b>To: Gulshan-eIqbal</b></p>
+      </ion-item>
+      <ion-item  (click)="ReservededitPage()">
+          <ion-thumbnail item-start>
+            <img src="img/map.png">
+          </ion-thumbnail>
+          <p item-end><ion-icon item-end name="create"></ion-icon>Edit </p>
+          <h2>From: Windsong Palace</h2>
+          <p><b>To: Gulshan-eIqbal</b></p>
+        </ion-item>
+        <ion-item  (click)="ReservededitPage()">
+            <ion-thumbnail item-start>
+              <img src="img/map.png">
+            </ion-thumbnail>
+           <p item-end><ion-icon item-end name="create"></ion-icon>Edit </p>
+            <h2>From: Windsong Palace</h2>
+            <p><b>To: Gulshan-eIqbal</b></p>
+          </ion-item>
+          <ion-item  (click)="ReservededitPage()">
+              <ion-thumbnail item-start>
+                <img src="img/map.png">
+              </ion-thumbnail>
+              <p item-end><ion-icon item-end name="create"></ion-icon>Edit </p>
+              <h2>From: Windsong Palace</h2>
+              <p><b>To: Gulshan-eIqbal</b></p>
+            </ion-item>
+            <ion-item  (click)="ReservededitPage()">
+                <ion-thumbnail item-start>
+                  <img src="img/map.png">
+                </ion-thumbnail>
+                <p item-end><ion-icon item-end name="create"></ion-icon>Edit </p>
+                <h2>From: Windsong Palace</h2>
+                <p><b>To: Gulshan-eIqbal</b></p>
+              </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

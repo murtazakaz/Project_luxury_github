@@ -1,0 +1,8 @@
+{
+  "name": "project_waitTake_user_github",
+  "app_id": "",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

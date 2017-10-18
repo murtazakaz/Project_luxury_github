@@ -1,0 +1,96 @@
+<ion-header>
+
+  <ion-navbar color="black">
+    <ion-title>Pick Drive</ion-title>
+    <ion-buttons end>
+        <button ion-button style="background:transparent;font-size: 2.7rem;" (click)=" dismiss()">
+     <ion-icon class="iconsize" name="close"></ion-icon>
+    </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-card>
+    <div style="text-align: left" padding>
+        
+                <h6><ion-icon item-start name="arrow-round-forward"></ion-icon>&nbsp;&nbsp;&nbsp;<b>From: {{userPickupLocation}}</b></h6>
+                <h6><ion-icon item-start name="pin"></ion-icon>&nbsp;&nbsp;&nbsp;<b>To: {{userDestination}}</b></h6>
+              </div>
+              <ion-item>
+                  <ion-thumbnail item-start>
+                    <img src="img/driver.jpg">
+                  </ion-thumbnail>
+                  <h2>Driver's Ratings</h2>
+                 <img style="width: 45%;" src="img/star.jpg"/>
+                 <p>Muhammad Ali</p>
+                 <p>Toyota Corolla Silver</p>
+                 <p><ion-icon name="stopwatch"></ion-icon>&nbsp;&nbsp;13 min away from your pickup location</p>
+                
+                </ion-item>
+                <!-- <ion-item> 
+
+                    <ion-thumbnail item-start>
+                        <img src="img/car1.png">
+                      </ion-thumbnail>
+                      <h2>Drive</h2>
+                     <p>Silver</p>
+                             
+                </ion-item> -->
+                <ion-grid style="margin-left: 2%;">
+                    <ion-row>
+                      <ion-col col-6>
+
+           <ion-icon style="font-size: xx-large;
+              color: green;" name="cash"></ion-icon>  <h6 style="margin-left: 26%;
+              margin-top: -15%;">Payment Cash</h6>
+                          
+                      </ion-col>
+                      <ion-col  col-3>
+                       
+                      </ion-col>
+                    </ion-row>
+                    <ion-row>
+                      <ion-col>
+                       <h6>Fare: 400 RS</h6>
+                      </ion-col>
+                    </ion-row>
+                    
+                  </ion-grid>
+                <div>
+                    <button (click)="CallNumber()" class="driverbtns" ion-button  left><ion-icon item-start name="call"></ion-icon>&nbsp;Contact</button>
+                    <button (click)="dismiss() " class="driverbtns" ion-button  end>  <ion-icon item-start name="close"></ion-icon>&nbsp;Cancel ride</button>
+                </div>
+
+  </ion-card>
+  <!-- <div align="center"><img src="img/map.png"/></div>
+  <div style="padding: 10px">
+    <div style="">
+    <ion-item style="border: 1px solid;">
+      <ion-label><ion-icon item-start name="pin"></ion-icon></ion-label>
+      <ion-input type="text" style="color:black" placeholder="Enter Destination"></ion-input>
+    </ion-item>
+  <div>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-4>
+            <h6>Selected Drive</h6> 
+        </ion-col>
+        <ion-col>
+            <img width="26%" src="img/car1.png"/>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  
+  </div>
+        <ion-icon style="font-size: xx-large;
+        color: green;" name="cash"></ion-icon>  <h6 style="margin-left: 12%;
+        margin-top: -6%;">Fare Estimate: 250RS</h6>
+      </div>
+        <br>
+      
+    <button ion-button block style="font-family: Montel" color="black" (click)="goNow()">Go Now</button>
+  </div> -->
+</ion-content>

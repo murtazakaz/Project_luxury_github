@@ -1,0 +1,33 @@
+<ion-content class="background">
+    <div class="animated bounceInDown" align="center" style="margin-top: -46%;padding: 5%;">
+        <img src="img/logo.png" />
+    </div>
+    <div align="center" style="margin-top:-25%;">
+        <ion-item class="bg animated bounceInUp">
+            <ion-label>
+                <!-- <ion-icon style="color:black" item-start name="mail"></ion-icon> -->
+            </ion-label>
+            <ion-input style="color:white" placeholder="Enter Email" [(ngModel)]="userEmail"></ion-input>
+        </ion-item>
+        <br>
+        <ion-item class="bg fadein">
+            <ion-label>
+                <!-- <ion-icon style="color:black" item-start name="lock"></ion-icon> -->
+            </ion-label>
+            <ion-input type="password" style="color:white" placeholder="Enter Password" [(ngModel)]="userPassword"></ion-input>
+        </ion-item>
+        <!-- <div align="center">
+            <ion-item style="background:transparent;margin-left:5%;">
+                <ion-label>Remember Password</ion-label>
+                <ion-checkbox></ion-checkbox>
+            </ion-item>
+        </div> -->
+        <br>
+        <button class="btnclass animated bounceInDown" (click)="signin()" ion-button>Sign In</button>
+        <button class="btnclass bounceInDown" (click)="forgotpwd()" ion-button>Forgot Password</button>
+        <br>
+        <h5 class="animated bounceInUp" style="color:white">Do not have an account?</h5>
+        <br>
+        <button (click)="signup()" class="btnclass animated bounceInUp" ion-button>Sign Up</button>
+    </div>
+</ion-content>

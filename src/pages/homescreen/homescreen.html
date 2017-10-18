@@ -1,0 +1,83 @@
+<ion-header no-lines>
+    <ion-navbar color="trans" hideBackButton>
+        <ion-title></ion-title>
+        <div class="fadein" (click)="DirectionPage()" style="margin-top: 12%;">
+            <div style="background:transparent;height: 60px;    margin-top: -10%;
+                width: 100%;">
+                <div style="margin-left: 10%;"><img style="width:11%;margin-top: 5%;" src="img/pin.png" />
+                    <h6 style="    margin-top: -10%;
+                margin-left: 16%;">{{currDestName}}</h6>
+                </div>
+            </div>
+        </div>
+        <ion-buttons left>
+            <button ion-button style="background:transparent;color:black;font-size: 2.7rem;" (click)="OnOpenMenu()">
+                 <ion-icon class="iconsize" name="menu"></ion-icon>
+                </button>
+        </ion-buttons>
+    </ion-navbar>
+
+</ion-header>
+<ion-content class="background">
+    <div id="map">
+        <div style="position: fixed; top:35%; left:43%; ">
+            <img width="60%; " src="img/markerUser.png ">
+        </div>
+    </div>
+    <div class=" fadein" style="background-color: rgba(255, 255, 255, 0.46);position: absolute;width: 100%;bottom: 89px;
+    overflow: auto;
+    white-space: nowrap; display: inline-block;
+    color: white;
+    text-align: center; 
+   /* padding: 14px;*/
+    text-decoration: none;  /* height:142px;*/overflow: hidden;">
+        <ion-grid>
+            <!-- <ion-row align-items-center>
+            <ion-col>
+                    Rs:15/KM
+            </ion-col>
+            <ion-col>
+                    Rs:20/KM
+                </ion-col>
+                <ion-col>
+                        Rs:40/KM
+                    </ion-col>
+        </ion-row> -->
+            <ion-row>
+                <ion-col>
+                    <div>
+                        <img class="imgb" (click)="fetchDrivers(20)" [class.my-class]="isClassVisible" src="img/car1.png" />
+                    </div>
+                </ion-col>
+                <ion-col>
+                    <div>
+                        <img class="imgb" (click)="fetchDrivers(22)" [class.my-class]="isClassVisible" src="img/car3.png" />
+                    </div>
+                </ion-col>
+                <ion-col>
+                    <div>
+                        <img class="imgb" (click)="fetchDrivers(23)" [class.my-class]="isClassVisible" src="img/car4.png" />
+                    </div>
+                </ion-col>
+            </ion-row>
+            <ion-row align-items-center>
+                <ion-col style="color: black;">Silver</ion-col>
+                <ion-col style="color: black;">Gold</ion-col>
+                <ion-col style="color: black;">Luxurri</ion-col>
+            </ion-row>
+        </ion-grid>
+
+    </div>
+
+    <ion-footer style="background: white" class="fadein">
+
+        <div align="center" style="margin-bottom: 8%;color:black">
+            <p (click)="showAddressModal()" style="font-size: 14px;">{{ currLocationName }}</p>
+        </div>
+        <div style="margin-top: -8%; ">
+            <!-- <button (click)="presentProfileModal()" class="btnBtnfooter " ion-button left>Go Now</button> -->
+            <button (click)="popup()" class="btnBtnfooter " ion-button left>Go Now</button>
+            <button (click)="ReservecarPage() " class="btnBtnfooter " ion-button end>Reserve</button>
+        </div>
+    </ion-footer>
+</ion-content>
