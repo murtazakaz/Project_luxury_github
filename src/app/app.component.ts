@@ -20,7 +20,7 @@ import { StoreDirectionmapPage } from '../pages/Store-directionmap/Store-directi
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = CategoriesPage;
+  rootPage:any =HomeScreen;
   homepage=HomeScreen;
   logout=CategoriesPage;
   wallet=WalletPage;

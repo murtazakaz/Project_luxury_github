@@ -71,13 +71,13 @@
 
     <ion-footer style="background: white" class="fadein">
 
-        <div align="center" style="margin-bottom: 8%;color:black">
-            <p (click)="showAddressModal()" style="font-size: 14px;">{{ currLocationName }}</p>
+        <div align="center" style="margin-bottom: 8%;color:black" *ngIf="currLocationName">
+            <ion-label>{{ currLocationName }}</ion-label>
         </div>
         <div style="margin-top: -8%; ">
             <!-- <button (click)="presentProfileModal()" class="btnBtnfooter " ion-button left>Go Now</button> -->
             <button (click)="popup()" class="btnBtnfooter " ion-button left>Go Now</button>
-            <button (click)="ReservecarPage() " class="btnBtnfooter " ion-button end>Reserve</button>
+            <button (click)="ReservecarPage()" class="btnBtnfooter " ion-button end>Reserve</button>
         </div>
     </ion-footer>
 </ion-content>

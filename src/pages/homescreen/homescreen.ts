@@ -40,6 +40,7 @@ export class HomeScreen {
     userId: any;
     currentDate: any;
     count=0;
+    
   constructor(private googleMaps: GoogleMaps, private menuCtrl: MenuController, public navParams: NavParams, private modalCtrl: ModalController, public navCtrl: NavController, private geolocation: Geolocation, public loadingCtrl: LoadingController, public http: Http, public alertCtrl: AlertController) {
     
     this.userId = this.navParams.get('userId');
@@ -128,6 +129,7 @@ export class HomeScreen {
             this.currLocationData = data.results[0].formatted_address;
             this.currLocationName = this.currLocationData;
             console.log("Address Is: " + this.currLocationName);
+           
         });
       }
 
@@ -142,6 +144,7 @@ export class HomeScreen {
 
 
   moveMapCameraToNewLocation(lati: any, longi: any) {
+    console.log("move camera")
     this.map.animateCamera({
       target: {lat: lati, lng: longi},
       zoom: 16,
@@ -150,6 +153,7 @@ export class HomeScreen {
       duration: 2000,
       padding: 0  // default = 20px
     });
+    this.getAddressFromLatLongCameraEnd(lati, longi)
    }  
    presentAlert() {
     const alert = this.alertCtrl.create({
@@ -164,7 +168,7 @@ export class HomeScreen {
   popup(){
     const alert = this.alertCtrl.create({
       title: 'Information!',
-      subTitle: 'This Section will be available on 15<sup>th</sup> of November',
+      subTitle: 'Luxurri Ride will be available on 15<sup>th</sup> of November. Get your first Luxurri Ride Free',
       buttons: [{ text: 'Open Luxurry Store',
       handler: () => {
         this.navCtrl.setRoot(StoreCategoriesPage)
@@ -219,7 +223,7 @@ this.presentAlert();
   }
 
   ReservecarPage() {
-    this.navCtrl.push(ReservecarPage)
+    this.navCtrl.push(ReservecarPage,{locationName: this.currLocationName})
   }
 
   DirectionPage() {

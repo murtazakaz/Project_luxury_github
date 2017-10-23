@@ -1,3 +1,4 @@
+import { CallNumber } from '@ionic-native/call-number';
 import { HomeScreen } from '../homescreen/homescreen';
 import { Http } from '@angular/http';
 import { Component } from '@angular/core';
@@ -21,6 +22,9 @@ import { Storage } from '@ionic/storage';
   templateUrl: 'store-itemdetails.html',
 })
 export class StoreItemdetailsPage {
+  rating: any = 0;
+  website: any;
+  contact: any;
   public currentlat: any;
   public currentlng: any;
   plng: any;
@@ -37,7 +41,7 @@ export class StoreItemdetailsPage {
   public item_id: any;
 public itemdetail:any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,private http: Http,public actionSheetCtrl: ActionSheetController,private geolocation: Geolocation,public loadingCtrl: LoadingController,private storage: Storage) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,private http: Http,public actionSheetCtrl: ActionSheetController,private geolocation: Geolocation,public loadingCtrl: LoadingController,private storage: Storage,private callNumber: CallNumber) {
    
     this.geolocation.getCurrentPosition().then((resp) => {
       console.log(resp.coords.latitude);
@@ -69,7 +73,15 @@ public itemdetail:any;
     this.photoarray = data.result.photos;
     this.plat =data.result.geometry.location.lat;
     this.plng =data.result.geometry.location.lng;
-    
+    this.contact = data.result.international_phone_number;
+    this.website = data.result.website;
+    this.rating = data.result.rating;
+    if (this.contact == "undefined" || this.contact == null) {
+      this.contact = "";
+  }
+  if (this.website == "undefined" || this.website == null) {
+      this.website = "";
+  }
     for (this.p in this.photoarray) {
     // console.log(this.photoarray[this.p].photo_reference);
     this.photo = this.photoarray[this.p].photo_reference;
@@ -132,5 +144,14 @@ actionsheetmap(mapurl)
 opendrive(){
   this.navCtrl.push(HomeScreen)
 }
+call()
+{
+  
+  
+    this.callNumber.callNumber(this.contact, true)
+    .then(() => console.log('Launched dialer!'))
+    .catch(() => console.log('Error launching dialer'));
 
+  
+}
 }

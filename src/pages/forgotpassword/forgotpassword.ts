@@ -1,3 +1,4 @@
+import { Http } from '@angular/http';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Login } from "../login/login";
@@ -8,8 +9,9 @@ import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/na
   templateUrl: 'forgotpassword.html'
 })
 export class ForgotPassword {
+  userEmail: string="";
 
-  constructor(private nativePageTransitions: NativePageTransitions,public navCtrl: NavController) {
+  constructor(private http:Http,private nativePageTransitions: NativePageTransitions,public navCtrl: NavController) {
 
   }
   login(){
@@ -26,4 +28,22 @@ export class ForgotPassword {
      this.nativePageTransitions.slide(options);
     this.navCtrl.push(Login)
   }
+
+
+  forgetPassword(){
+    if(this.userEmail===""){
+  alert("Enter Email")
+    }
+    let apiUrl = 'http://luxurri.com/luxurri_App/iOSforgotpwd.php?email='+ this.userEmail;
+    
+        console.log(apiUrl);
+    
+        this.http.get(apiUrl).map(res => res.json()).subscribe(data => {
+    
+    if(data.Status=="failed"){
+      alert("Invalid eamil")
+    }
+
+  });
+}
 }

@@ -20,33 +20,48 @@
                     {{placename}}
                 </ion-card-title>
 
-                <ion-row style="border-bottom: 1px solid #e0e0e0" *ngIf="placeaddress">
+                <ion-row style="border-bottom: 1px solid rgba(244, 244, 244, 0.28)" *ngIf="placeaddress">
                     <ion-col col-3 align="center">
                         <ion-icon name="pin"></ion-icon>
                     </ion-col>
                     <ion-col col-1></ion-col>
                     <ion-col col-8>{{placeaddress}}</ion-col>
                 </ion-row>
-                <!-- <ion-row style="border-bottom: 1px solid #e0e0e0" *ngIf="googlemapurl"> -->
-                <!-- <ion-col col-3 align="center">
-                        <ion-icon name="navigate"></ion-icon>
+                <ion-row style="border-bottom: 1px solid rgba(244, 244, 244, 0.28)" *ngIf="rating">
+                    <ion-col col-3 align="center">
+                        <ion-icon name="star-half"></ion-icon>
                     </ion-col>
-                    <ion-col col-1></ion-col> -->
-                <!-- <a href={{googlemapurl}}>
-                        <ion-col col-8>Get Direction</ion-col>
-                    </a> -->
-                <!-- <a tappable (click)="actionsheetmap(googlemapurl)">
+                    <ion-col col-1></ion-col>
+
+                    <ion-col col-8>{{rating}}</ion-col>
+
+                    <!-- <a tappable (click)="actionsheetmap(googlemapurl)">
                         <ion-col col-8>Get Direction</ion-col>
                     </a> -->
 
-                <!-- </ion-row> -->
-                <!-- <ion-row style="border-bottom: 1px solid #e0e0e0" *ngIf="placeaddress">
+                </ion-row>
+                <ion-row style="border-bottom:1px solid rgba(244, 244, 244, 0.28)" *ngIf="website">
                     <ion-col col-3 align="center">
-                        <ion-icon name="information-circle"></ion-icon>
+                        <ion-icon name="globe"></ion-icon>
                     </ion-col>
                     <ion-col col-1></ion-col>
-                    <ion-col col-8>{{placeaddress}}</ion-col>
-                </ion-row> -->
+                    <a style="color: #488aff; text-decoration: none;" href={{website}}>
+                        <ion-col col-8>View Website</ion-col>
+                    </a>
+                    <!-- <a tappable (click)="actionsheetmap(googlemapurl)">
+                        <ion-col col-8>Get Direction</ion-col>
+                    </a> -->
+
+                </ion-row>
+                <ion-row style="border-bottom: 1px solid rgba(244, 244, 244, 0.28)" *ngIf="contact">
+                    <ion-col col-3 align="center">
+                        <ion-icon name="call"></ion-icon>
+                    </ion-col>
+                    <ion-col col-1></ion-col>
+                    <a (tap)="call()">
+                        <ion-col col-8>Call</ion-col>
+                    </a>
+                </ion-row>
                 <br>
 
             </ion-card-content>

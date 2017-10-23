@@ -12,37 +12,37 @@
 
 
 <ion-content padding class="background">
-    <div padding class="bgitem" style="color:white">
-        Wingsong Palace 6th Floor office#604
+    <div padding class="bgitem" style="color:white" *ngIf="locationName">
+        {{locationName}}
     </div>
     <br>
     <div>
         <ion-item class="bgitem">
             <ion-label style="color:white">Date</ion-label>
-            <ion-datetime style="color:white"></ion-datetime>
+            <ion-datetime style="color:white" [(ngModel)]="date"></ion-datetime>
         </ion-item>
         <br>
         <ion-item class="bgitem">
             <ion-label style="color:white">Start Time</ion-label>
-            <ion-datetime style="color:white"></ion-datetime>
+            <ion-input type="time" style="color:white" [(ngModel)]="startTime"></ion-input>
         </ion-item>
-        <br>
+        <!-- <br>
         <ion-item class="bgitem">
             <ion-textarea style="color:white"placeholder="Infront of">
             </ion-textarea>
-        </ion-item>
+        </ion-item> -->
         <br>
         <div padding class="bgitem" style="color: white;">
-            Luxurri 1.90/KM
+            <ion-input type="text" placeholder="Enter drive Category" [(ngModel)]="driveCat"></ion-input>
         </div>
         <br>
-        <ion-item class="bgitem"style="height: 100px;">
-            <ion-textarea style="color:white" placeholder="Description(Optional)">
+        <ion-item class="bgitem" style="height: 100px;">
+            <ion-textarea style="color:white" placeholder="Description(Optional)" [(ngModel)]="description">
             </ion-textarea>
         </ion-item>
         <br>
         <div align="center">
-            <button class="btnorder" ion-button left>Reserve</button>
+            <button class="btnorder" (click)="Reservecar()" ion-button left>Reserve</button>
         </div>
     </div>
 </ion-content>
